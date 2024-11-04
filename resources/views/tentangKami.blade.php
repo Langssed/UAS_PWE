@@ -45,14 +45,14 @@
             <!-- Route -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#tentang-kami">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/tentang-kami">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#layanan-kami">Layanan Kami</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#artikel">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/artikel">Artikel</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#hubungi-kami">Hubungi Kami</a></li>
                 </ul>
                 <!-- Button Daftar -->
-                <a href="#" class="btn rounded-5 ms-auto text-white" style="background: #2d5086">Daftar Online</a>
+                <a href="#" class="btn rounded-5 ms-auto text-white " style="background: #2d5086">Daftar Online</a>
             </div>
         </div>
     </header>
@@ -67,7 +67,7 @@
         <!-- Body 2 -->
         <div class="container py-5" style="max-width: 860px;">
             <!-- Bagian Profil -->
-            <h1 class="mb-3 fs-3">Profil</h1>
+            <h1 class="mb-3 fs-4 text-muted">Profil</h1>
             <p class="text-muted fs-6">
                 Didirikan pada tahun 2018, ini membuktikan bahwa INAKLUG merupakan konsultan pendidikan internasional yang berpengalaman,
                 terbesar, terpercaya, dan juga memiliki jam terbang tinggi untuk melayani para anak-anak muda Indonesia untuk menuntut ilmu
@@ -88,7 +88,7 @@
             <div class="row">
                 <!-- Visi -->
                 <div class="col-12 col-md-6 mb-2">
-                    <h2 class="fs-4">Visi</h2>
+                    <h2 class="fs-4 text-muted">Visi</h2>
                     <p class="text-muted fs-6">
                         Membangun Sumber Daya Indonesia yang mempunyai daya saing tinggi, tangguh secara internasional untuk menghadapi persaingan di era globalisasi serta membangun karakter pemimpin Indonesia masa depan yang tangguh, mandiri, dan profesional.
                     </p>
@@ -96,7 +96,7 @@
         
                 <!-- Misi -->
                 <div class="col-12 col-md-6 mb-2">
-                    <h2 class="fs-4">Misi</h2>
+                    <h2 class="fs-4 text-muted">Misi</h2>
                     <p class="text-muted fs-6">
                         Membangun Sumber Daya Indonesia yang mempunyai daya saing tinggi, tangguh secara internasional untuk menghadapi persaingan di era globalisasi serta membangun karakter pemimpin Indonesia masa depan yang tangguh, mandiri, dan profesional.
                     </p>
