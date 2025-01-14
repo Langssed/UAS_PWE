@@ -21,6 +21,18 @@ Route::get('/tentang-kami', function () {
     return view('tentangkami');
 });
 
+Route::get('/hubungi-kami', function () {
+    return view('hubungikami');
+});
+
 Route::get('/artikel', function () {
     return view('artikel');
+});
+
+Route::get('/layanan-kami', function () {
+    return view('layananKami');
+});
+
+Route::get('/daftar-online', function () {
+    return view('daftarOnline');
 });
