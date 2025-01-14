@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/enterprise.js?render=your-site-key"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         body {
@@ -40,6 +41,7 @@
             }
         }
     </style>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <!-- Navbar -->
@@ -59,7 +61,7 @@
         <!-- Form Section -->
         <div class="container py-5 text-muted" style="max-width: 860px;">
             <h2 class="mb-5 fw-bold fs-4 text-center">KIRIM PESAN</h2>
-            <form id="hubungiKamiForm" action="/" method="GET" class="row g-4">
+            <form id="hubungiKamiForm" class="row g-4">
                 @csrf
                 <div class="col-sm-6">
                     <label for="nama" class="form-label fw-bold">Nama*</label>
@@ -115,5 +117,31 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery Ajax -->
+    <script>
+        $(document).ready(function() {
+            $('#hubungiKamiForm').on('submit', function(e) {
+                e.preventDefault();
+                const formData = $(this).serialize();
+
+                $.ajax({
+                    url: '/hubungi-kami', // Sesuaikan URL dengan rute Laravel Anda
+                    type: 'POST',
+                    data: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(response) {
+                        alert('Pesan berhasil dikirim!');
+                        window.location.href = '/'; // Redirect ke halaman home
+                    },
+                    error: function() {
+                        alert('Terjadi kesalahan. Coba lagi nanti.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

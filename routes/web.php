@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HubungiKamiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::get('/layanan-kami', function () {
 Route::get('/daftar-online', function () {
     return view('daftarOnline');
 });
+
+Route::post('/hubungi-kami', [HubungiKamiController::class, 'store']);
